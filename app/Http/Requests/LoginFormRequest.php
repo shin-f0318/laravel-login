@@ -19,8 +19,11 @@ class LoginFormRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
+
+    // バリデーションの設定
     public function rules(): array
     {
+        // requiredは必須項目
         return [
             'email' => 'required|max:255',
             'password' => 'required',
